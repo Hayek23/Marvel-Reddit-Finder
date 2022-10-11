@@ -1,13 +1,7 @@
-// function getApi(){
-//     var requestUrl = 'https://www.reddit.com/subreddits/search.json?q=hulk'
+var marvelApiKey = "caf809fd4bc0067858336835423deb52";
 
-//     fetch(requestUrl)
-//         .then(function(response){
-//             // console.log(data)
-//             return response.json();
-//         })
-// }
-// getApi()
+function getApi(){
+    var requestUrl = 'https://www.reddit.com/subreddits/search.json?q=hulk'
 
 var heroReddit = 'http://www.reddit.com/search.json?q={hero-name}'
 
@@ -21,3 +15,5 @@ fetch(heroReddit)
   .catch(function(err) {
     console.log(err);   // Log error if any
   });
+
+
