@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="">
 </head>
-<header>
+<header id="header">
     <h1>Marvel Reddit Finder</h1>
 </header>
 <body>
     <section>
-        <div>
+        <div id="hero-selector">
             <h2>Select Your Favorite Hero</div></h2>
         </div>
+    </section>
+ <head>
+    <section>
         <!-- need section for Thumbnail of hero -->
         <!-- Select needs an id to be called on -->
         <select id="hero">
@@ -26,17 +30,17 @@
         </select>
         <button id = "submitbtn">This is my fav!</button>
     </section>
-    <!-- this needs to be an area we can fill with text throush JS -->
-    <section>
+</head>
+    <section id="comic">
         <h2>Heres some of our suggested reading material!</h2>
     </section>
     <!-- this needs to be an area we can fill using JS, where subredits will show -->
-    <section>
-        <h2>Checkout these subreddits!</h2>
-        <div id="fill-in">
-            <p></p>
-        </div>
-    </section>
+    <div>
+         <h2>Checkout these subreddits!</h2>
+    </div>
+    <div id="reddit">
+        <p></p>
+    </div>
 </body>
 <script src="./Assets/script.js"></script>
 </html>
