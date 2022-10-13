@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../BUT-VIRT-FSF-PT-08-2022-U-LOLC"
+		},
+		{
+			"path": "../Coding test"
+		},
+		{
+			"path": "../Weather"
+		},
+		{
+			"path": "../horiseon"
+		},
+		{
+			"path": "../Ts"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "onWindowChange"
+	}
+}
