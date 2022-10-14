@@ -5,6 +5,12 @@ var publicMarvelKey = "caf809fd4bc0067858336835423deb52";
 var privateMarvelKey = "abe53a41ffd746fcc53851093d55fa7321bf7c8f";
 var timestamp = Date.now()
 var hash = md5(`${timestamp}${privateMarvelKey}${publicMarvelKey}`)
+var marvelUrlStart = 'https://gateway.marvel.com/v1/public/characters/'
+var captainAmericaApi = "1009220"
+var hulkApi = "1009351"
+var ironManApi = "1009368"
+var spiderManApi = "1009610"
+var wolverineApi = "1009718"
 
 btn.addEventListener('click', heroSelect);
 
@@ -26,9 +32,8 @@ function getApi(){
                   })};
                   
                   
-                  // Marvel API
-                function getMarvelApi(){
-                    var marvelUrlStart = 'https://gateway.marvel.com/v1/public/characters' //+ hero.value
+// Marvel API
+function getMarvelApi(){
                     
 fetch(`${marvelUrlStart}?ts=${timestamp}&apikey=${publicMarvelKey}&hash=${hash}`)
   .then(function(res) {
