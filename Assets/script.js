@@ -80,7 +80,10 @@ function heroSelect(){
         console.log(data);   // Logs the data to the console
         for (var i = 0; i<5; i++) {
             var listReddit = document.createElement('li');
-            listReddit.textContent = 'https\\' + data.data.children[i].data.permalink
+            var subreddit = data.data.children[i].data.permalink
+            var subredditTitle = data.data.children[i].data.title
+            listReddit.innerHTML = `<a href = 'http://www.reddit.com/${subreddit}'>${subredditTitle}</a>`
+            
             subList.appendChild(listReddit)
         }
     })
