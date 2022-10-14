@@ -4,8 +4,8 @@ var subList = document.getElementById('subreddits');
 var marvelUrlStart = 'https://gateway.marvel.com/v1/public'
 var publicMarvelKey = "caf809fd4bc0067858336835423deb52";
 var privateMarvelKey = "abe53a41ffd746fcc53851093d55fa7321bf7c8f";
-var timestamp = Date.now()
-var hash = md5(`${timestamp}${privateMarvelKey}${publicMarvelKey}`)
+var timestamp = Date.now();
+var hash = md5(`${timestamp}${privateMarvelKey}${publicMarvelKey}`);
 
 btn.addEventListener('click', heroSelect);
 
@@ -55,7 +55,11 @@ function heroSelect(){
         console.log(data);   // Logs the data to the console
         for (var i = 0; i<5; i++) {
             var listReddit = document.createElement('li');
-            listReddit.textContent = 'https\\' + data.data.children[i].data.permalink
+            var subreddit = data.data.children[i].data.permalink
+            var subredditTitle = data.data.children[i].data.title
+            listReddit.innerHTML = `<a href = 'http://www.reddit.com/${subreddit}'>${subredditTitle}</a>`
+            // listReddit.href = 'http://www.reddit.com/' 
+            
             subList.appendChild(listReddit)
         }
     })
