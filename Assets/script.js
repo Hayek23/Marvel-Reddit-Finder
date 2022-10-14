@@ -18,13 +18,13 @@ function getApi(){
                 
 function getMarvelApi(){
     
-var marvelUrlStart = 'https://gateway.marvel.com/v1/public'
+var marvelUrlStart = 'https://gateway.marvel.com/v1/public/characters'
 var publicMarvelKey = "caf809fd4bc0067858336835423deb52";
 var privateMarvelKey = "abe53a41ffd746fcc53851093d55fa7321bf7c8f";
 var timestamp = Date.now()
 var hash = md5(`${timestamp}${privateMarvelKey}${publicMarvelKey}`)
 
-fetch(`${marvelUrlStart}?ts=t${timestamp}&apikey=${publicMarvelKey}&hash=${hash}`)
+fetch(`${marvelUrlStart}?ts=${timestamp}&apikey=${publicMarvelKey}&hash=${hash}`)
   .then(function(res) {
     return res.json();   // Convert the data into JSON
   })
