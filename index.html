@@ -5,58 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
-<header id="header">
-    <h1>Marvel Reddit Finder</h1>
-</header>
-<body>
-    <section>
-        <div id="hero-selector">
-            <h2>Select Your Favorite Hero</div></h2>
-        </div>
-    </section>
- <head>
 
+<body>
+    <header id="header">
+    <h1>Marvel Reddit Finder</h1>
+    </header>
+        <section>
+            <div id="hero-selector">
+                <h2>Select Your Favorite Hero</div></h2>
+            </div>
+        </section>
     <section>
-        <!-- need section for Thumbnail of hero -->
-        <!-- Select needs an id to be called on -->
         <select id="hero">
             <option>-select-</option>
             <option value="captain-america" id="1009220">Captain America</option>
-            <option value="The-Hulk" id="1009351">The Hulk</option>
-            <option value="Iron-Man" id="1009368">Iron Man</option>
-            <option value="Spiderman" id="1009610">Spiderman</option>
-            <option value="Wolverine" id="1009718">Wolverine</option>
+            <option value="The-Hulk">The Hulk</option>
+            <option value="Iron-Man">Iron Man</option>
+            <option value="Spiderman">Spiderman</option>
+            <option value="Wolverine">Wolverine</option>
         </select>
         <button id = "submitbtn">This is my fav!</button>
     </section>
-</head>
-    <section id="comic">
-
-    </section>
-    <section id="reddit">
-
-    <!-- this needs to be an area we can fill with text throush JS -->
-    <section id="comic"> 
+    
+    <results>       
+        <img id="character-image" src="">
         <h2>Heres some of our suggested reading material!</h2>
-        <ul>
-
-        </ul>
-    </section>
-    <!-- this needs to be an area we can fill using JS, where subredits will show -->
-    <div>
-         <h2>Checkout these subreddit posts about your character!</h2>
-    </div>
-    <div>
-        <ul id="subreddits"></ul>
-    </div>
+        <section id="comic">
+            <h3>Checkout these comics!</h3>
+            <ul id="comics-list"></ul>
+        </section>
+        <section id="reddit">
+            <div>
+                <h3>Checkout these subreddits!</h3>
+            </div>
+             <div>
+                <ul id="subreddits"></ul>
+            </div>
+    </results>
 </body>
 
 <script
   src="https://code.jquery.com/jquery-3.6.1.js"
   integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
   crossorigin="anonymous"></script>
+  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js" integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="./Assets/md5.js"></script>
