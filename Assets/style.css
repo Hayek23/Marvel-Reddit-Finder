@@ -1,12 +1,3 @@
-:root {
-    --primary: #;
-    --secondary: #;
-    --tertiary: #;
-    --light-dark: #;
-    --dark: #;
-    --border-radius: .3rem;
-}
-
 * {
     box-sizing: border-box;
     padding: 0%;
@@ -27,7 +18,7 @@ header {display: flex;
 }
 
 h1{
-    font-size: 200%;
+    font-size: 250%;
 }
 
 h2 { 
