@@ -3,6 +3,7 @@ var btn = document.getElementById('submitbtn');
 var characterImage = document.querySelector('#character-image');
 var comicsList = document.querySelector('#comics-list');
 var subList = document.getElementById('subreddits');
+var favList = document.getElementById('favlist')
 var publicMarvelKey = "caf809fd4bc0067858336835423deb52";
 var privateMarvelKey = "abe53a41ffd746fcc53851093d55fa7321bf7c8f";
 var timestamp = Date.now();
@@ -12,7 +13,9 @@ var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
 // favorite code
     favorites.forEach(function(favorite){
-        document.getElementById(favorite).className = 'fav';
+        var li = document.createElement('li')
+        li.innerHTML = favorite.href
+        favList.appendChild(li)
     });
 
 
@@ -102,10 +105,12 @@ function heroSelect(){
             favBtn.addEventListener('click', (e)=> {
                 item = e.target
                 var id = data.data.children[i].data.id
-                                    index = favorites.indexOf(id);
+                    index = favorites.find(element => {
+                        return element.id === id;
+                      });
                 if (!id) return;
-                if (index == -1){
-                    favorites.push(id);
+                if (index == undefined){
+                    favorites.push({id: id, href:`<a href = 'http://www.reddit.com/${subreddit}'>${subredditTitle}</a>`});
                     item.className = 'fav'
                 } else {
                     favorites.splice(index, 1)
