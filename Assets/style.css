@@ -10,7 +10,8 @@ body {
 
 header {display: flex;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 1%;
     background-color: #991414;
     color: #fff;
@@ -18,7 +19,7 @@ header {display: flex;
 }
 
 h1{
-    font-size: 250%;
+    color: #fff;
 }
 
 h2 { 
@@ -28,4 +29,36 @@ h2 {
  .hero {
     font-size: 75%;
     font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+ }
+
+ .title {
+    font-size: 20px;
+    border: 1px solid blue;
+    
+ }
+
+ #reddit {
+
+ }
+
+ #subreddits {
+    border: 5px solid #807b7b;
+    padding-top: 5px;
+    padding-bottom: 5px;
+ }
+ 
+ .s2 {
+    border: 5px solid #807b7b;
+ }
+
+ .s3 {
+    border: 5px solid #807b7b;
+ }
+
+ .s4 {
+    border: 5px solid #807b7b;
+ }
+
+ .s5 {
+    border: 5px solid #807b7b;
  }
