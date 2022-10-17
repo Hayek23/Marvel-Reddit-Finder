@@ -29,7 +29,7 @@ function getApi(){
   var requestUrl = 'https://www.reddit.com/subreddits/search.json?q=hulk'
   
   
-  var heroReddit = 'http://www.reddit.com/search.json?q={hero-name}'
+  var heroReddit = 'https://www.reddit.com/search.json?q={hero-name}'
   
 fetch(heroReddit)
     .then(function(res) {
@@ -86,7 +86,7 @@ function getMarvelApi(){
 //   Reddit API
 function heroSelect(){
     var heroChoice = hero.value;
-    var heroSubredditURL = 'http://www.reddit.com/search.json?q=' + heroChoice;
+    var heroSubredditURL = 'https://www.reddit.com/search.json?q=' + heroChoice;
     fetch(heroSubredditURL)
     .then(function(response) {
         return response.json();
@@ -97,7 +97,7 @@ function heroSelect(){
             var listReddit = document.createElement('li');
             var subreddit = data.data.children[i].data.permalink
             var subredditTitle = data.data.children[i].data.title
-            listReddit.innerHTML = `<a href = 'http://www.reddit.com/${subreddit}'>${subredditTitle}</a>`
+            listReddit.innerHTML = `<a href = 'https://www.reddit.com/${subreddit}'>${subredditTitle}</a>`
             // Favorite button code
             var favBtn = document.createElement('button')
             favBtn.textContent = 'Favorite'
@@ -110,7 +110,7 @@ function heroSelect(){
                       });
                 if (!id) return;
                 if (index == undefined){
-                    favorites.push({id: id, href:`<a href = 'http://www.reddit.com/${subreddit}'>${subredditTitle}</a>`});
+                    favorites.push({id: id, href:`<a href = 'https://www.reddit.com/${subreddit}'>${subredditTitle}</a>`});
                     item.className = 'fav'
                 } else {
                     favorites.splice(index, 1)
