@@ -77,14 +77,20 @@ function heroSelect(){
         return response.json();
     })
     .then(function(data) {
-        console.log(data);   // Logs the data to the console
+        console.log(data);
         for (var i = 0; i<5; i++) {
             var listReddit = document.createElement('li');
             var subreddit = data.data.children[i].data.permalink
             var subredditTitle = data.data.children[i].data.title
             listReddit.innerHTML = `<a href = 'http://www.reddit.com/${subreddit}'>${subredditTitle}</a>`
-            
+            // Favorite button code
+            var favBtn = document.createElement('button')
+            favBtn.textContent = 'Favorite'
+            favBtn.addEventListener("click", favorite)
+
+            // appending code
             subList.appendChild(listReddit)
+            subList.appendChild(favBtn)
         }
     })
     .catch(function(err) {
