@@ -59,9 +59,11 @@ function getMarvelApi(){
   // for loop for character comic
   for (var i = 0; i<5; i++) {
     var listComics = document.createElement('li');
-    listComics.textContent = data.data.results[0].comics.items[i];
-    console.log(listComics);
-    listComics.appendChild(comicsList);
+    var comic = data.data.results[0].comics.items[i].resourceURI;
+    var comicTitle = data.data.results[0].comics.items[i].name;
+    // listComics.innerHTML = `<a href="${comic}?ts=${timestamp}&apikey=${publicMarvelKey}&hash=${hash}">${comicTitle}</a>`
+    listComics.textContent = comicTitle;
+    comicsList.appendChild(listComics);
   }})
   .catch(function(err) {
     console.log(err);   // Log error if any
