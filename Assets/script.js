@@ -45,7 +45,9 @@ fetch(heroReddit)
                   
 // Marvel API
 function getMarvelApi(){
-               
+
+  comicsList.textContent = ""; 
+
  if (hero.value === 'captain-america') {
   var heroId = "1009220";
   characterImage.src = "http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/portrait_incredible.jpg";
@@ -85,6 +87,7 @@ function getMarvelApi(){
 
 //   Reddit API
 function heroSelect(){
+  subList.textContent = ""; 
     var heroChoice = hero.value;
     var heroSubredditURL = 'http://www.reddit.com/search.json?q=' + heroChoice;
     fetch(heroSubredditURL)
