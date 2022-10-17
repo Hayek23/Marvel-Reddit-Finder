@@ -1,5 +1,7 @@
 var hero = document.getElementById('hero');
 var btn = document.getElementById('submitbtn');
+var heroNameDisplay = document.getElementById('hero-name');
+var heroDescriptionDisplay = document.getElementById('hero-description');
 var characterImage = document.querySelector('#character-image');
 var comicsList = document.querySelector('#comics-list');
 var subList = document.getElementById('subreddits');
@@ -74,6 +76,8 @@ function getMarvelApi(){
   // for loop for character comic
   for (var i = 0; i<5; i++) {
     var listComics = document.createElement('li');
+    var heroName = 
+    var heroDescription = 
     var comic = data.data.results[0].comics.items[i].resourceURI;
     var comicTitle = data.data.results[0].comics.items[i].name;
     // listComics.innerHTML = `<a href="${comic}?ts=${timestamp}&apikey=${publicMarvelKey}&hash=${hash}">${comicTitle}</a>`
