@@ -48,7 +48,9 @@ fetch(heroReddit)
 // Marvel API
 function getMarvelApi(){
 
-  comicsList.textContent = ""; 
+  heroNameDisplay.textContent = "";
+  heroDescriptionDisplay.textContent = "";
+  comicsList.textContent = "";
 
  if (hero.value === 'captain-america') {
   var heroId = "1009220";
@@ -73,11 +75,15 @@ function getMarvelApi(){
     })  // Convert the data into JSON
     .then(function(data) {
       console.log(data);   // Logs the data to the console
+      var heroName = document.createElement('h1');
+      heroName.textContent = data.data.results[0].name;
+      heroNameDisplay.appendChild(heroName);
+      var heroDescription = document.createElement('p');
+      heroDescription.textContent = data.data.results[0].description;
+      heroDescriptionDisplay.appendChild(heroDescription);
   // for loop for character comic
   for (var i = 0; i<5; i++) {
     var listComics = document.createElement('li');
-    var heroName = 
-    var heroDescription = 
     var comic = data.data.results[0].comics.items[i].resourceURI;
     var comicTitle = data.data.results[0].comics.items[i].name;
     // listComics.innerHTML = `<a href="${comic}?ts=${timestamp}&apikey=${publicMarvelKey}&hash=${hash}">${comicTitle}</a>`
