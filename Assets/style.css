@@ -26,46 +26,50 @@ h1{
 h2 { 
     font-size: 150%;
     font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
-    
+    margin-left: 420px;
 }
 
 h3 {
-   font-size: 120%;
+   font-size: 100%;
    font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     margin-left: 50px;
 }
 
 h4 {
    font-size: 150%;
-   margin-left: 50px;
+   margin-left: 475px;
 }
 
 h5 {
    font-size: 125%;
-   margin-left: 500px;
+   margin-left: 450px;
 }
 
- .hero {
+ #hero {
     font-size: 75%;
     font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    margin-left: 475px;
  }
 
  .title {
     font-size: 50px;
-    border: 40px solid blue;
+    border: 40px solid rgb(13, 13, 236);
     
  }
 
- #reddit {
-
- }
-
  #subreddits {
-    border: 5px solid #807b7b;    
+    border: 10px solid #991414;    
     margin: 50px;
-    margin-left: 375px;
-    margin-right: 275px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 20px;
  }
 
+ #character-image {
+   margin-left: 475px;
+   margin-top: 5px;
+ }
  
- 
+ #hero-name {
+   margin-left: 475px;
+ }
