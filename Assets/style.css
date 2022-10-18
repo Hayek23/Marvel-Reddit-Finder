@@ -37,12 +37,12 @@ h3 {
 
 h4 {
    font-size: 150%;
-   margin-left: 450px;
+   margin-left: 460px;
 }
 
 h5 {
-   font-size: 125%;
-   margin-left: 450px;
+   font-size: 150%;
+   margin-left: 440px;
 }
 
  #hero {
@@ -71,5 +71,9 @@ h5 {
  }
  
  #hero-name {
-   margin-left: 130px;
+   margin-left: 50px;
+ }
+
+ #comics-list {
+   margin-left: 475px;
  }
