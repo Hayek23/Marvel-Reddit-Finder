@@ -26,7 +26,7 @@ h1{
 h2 { 
     font-size: 150%;
     font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
-    margin-left: 420px;
+    margin-left: 520px;
 }
 
 h3 {
@@ -37,18 +37,18 @@ h3 {
 
 h4 {
    font-size: 150%;
-   margin-left: 460px;
+   margin-left: 560px;
 }
 
 h5 {
    font-size: 150%;
-   margin-left: 440px;
+   margin-left: 540px;
 }
 
  #hero {
     font-size: 75%;
     font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
-    margin-left: 475px;
+    margin-left: 575px;
  }
 
  .title {
@@ -66,7 +66,7 @@ h5 {
  }
 
  #character-image {
-   margin-left: 475px;
+   margin-left: 575px;
    margin-top: 5px;
  }
  
@@ -75,5 +75,5 @@ h5 {
  }
 
  #comics-list {
-   margin-left: 475px;
+   margin-left: 575px;
  }
