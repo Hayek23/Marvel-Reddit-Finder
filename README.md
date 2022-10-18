@@ -1,2 +1,13 @@
 # Marvel-Reddit-Finder
-This is project 1 for our bootcamp. It will be an application for finding marvel characters reddits.
+# Group Project 1: Interactive Front-End
+
+![Alt text](./assets/screenshot.JPG "Screenshot")
+
+## Live Link
+https://hayek23.github.io/Marvel-Reddit-Finder/
+
+## Repository Link
+https://github.com/Hayek23/Marvel-Reddit-Finder
+
+## Description
+This is project 1 for our bootcamp. It is an application for finding marvel characters reddits utilizing the Marvel API and Reddit API.
