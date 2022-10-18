@@ -75,7 +75,7 @@ function getMarvelApi(){
     })  // Convert the data into JSON
     .then(function(data) {
       console.log(data);   // Logs the data to the console
-      var heroName = document.createElement('h1');
+      var heroName = document.createElement('h2');
       heroName.textContent = data.data.results[0].name;
       heroNameDisplay.appendChild(heroName);
       var heroDescription = document.createElement('p');
