@@ -108,32 +108,36 @@ function heroSelect(){
         console.log(data);
         for (var i = 0; i<5; i++) {
             var listReddit = document.createElement('li');
-            var subreddit = data.data.children[i].data.permalink
-            var subredditTitle = data.data.children[i].data.title
-            listReddit.innerHTML = `<a href = 'https://www.reddit.com/${subreddit}'>${subredditTitle}</a>`
+            var subreddit = data.data.children[i].data.permalink;
+            var subredditTitle = data.data.children[i].data.title;
+            listReddit.innerHTML = `<a href = 'https://www.reddit.com/${subreddit}'>${subredditTitle}</a>`;
             // Favorite button code
             var favBtn = document.createElement('button')
-            favBtn.textContent = 'Favorite'
-            favBtn.setAttribute("id", data.data.children[i].data.id)
+            favBtn.textContent = 'Favorite';
+            favBtn.setAttribute("id", data.data.children[i].data.id);
+            favBtn.setAttribute("data-subreddit", subreddit)
+            favBtn.setAttribute("data-title", subredditTitle)
             favBtn.addEventListener('click', (e)=> {
                 item = e.target
-                var id = data.data.children[i].data.id
+                var id = e.target.getAttribute("id")
+                var dataSubreddit = e.target.getAttribute("data-subreddit")
+                var dataSubredditTitle = e.target.getAttribute("data-title")
                     index = favorites.find(element => {
                         return element.id === id;
                       });
                 if (!id) return;
                 if (index == undefined){
-                    favorites.push({id: id, href:`<a href = 'https://www.reddit.com/${subreddit}'>${subredditTitle}</a>`});
-                    item.className = 'fav'
+                    favorites.push({id: id, href:`<a href = 'https://www.reddit.com/${dataSubreddit}'>${dataSubredditTitle}</a>`});
+                    item.className = 'fav';
                 } else {
-                    favorites.splice(index, 1)
+                    favorites.splice(index, 1);
                     item.className = '';
-                }
+                };
                                 localStorage.setItem('favorites', JSON.stringify(favorites))
                             });
             // appending code
-            subList.appendChild(listReddit)
-            listReddit.appendChild(favBtn)
+            subList.appendChild(listReddit);
+            listReddit.appendChild(favBtn);
         }
     })
     .catch(function(err) {
