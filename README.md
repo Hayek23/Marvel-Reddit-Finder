@@ -1,7 +1,7 @@
 # Marvel-Reddit-Finder
 # Group Project 1: Interactive Front-End
 
-![Alt text](./assets/screenshot.JPG "Screenshot")
+![Alt text](./Assets/screenshot.JPG "Screenshot")
 
 ## Live Link
 https://hayek23.github.io/Marvel-Reddit-Finder/
